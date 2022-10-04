@@ -11,6 +11,8 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    env: 
+        IMAGE_TAG: ${{ github.run_number }}
 
     steps:
       -
@@ -32,4 +34,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{secrets.DOCKER_USERNAME}}/kenyan_food_classification_gradio:latest
+          tags: ${{secrets.DOCKER_USERNAME}}/kenyan_food_classification_gradio:$IMAGE_TAG
