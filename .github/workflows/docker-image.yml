@@ -1,0 +1,35 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      -
+        name: Step-1 Clone github Reop
+        uses: actions/checkout@v2
+      -
+        name: Step-2 Login to Docker
+        uses: docker/login-action@v2.0.0 
+        with :
+          username: ${{secrets.DOCKER_USERNAME}}
+          password: ${{secrets.DOCKER_PASSWORD}}
+      - 
+        name: Step-3 Docker Steup
+        uses: docker/setup-buildx-action@v2.0.0
+      -
+        name: Step-4 Docker Build and push to docker hub
+        uses: docker/build-push-action@v3.1.1
+        with :
+          context: .
+          file: ./Dockerfile
+          push: true
+          tags: ${{secrets.DOCKER_USERNAME}}/kenyan_food_classification_gradio:latest
