@@ -9,4 +9,4 @@ app_file: app.py
 pinned: false
 ---
 
-Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
+Please visit the deployed model at https://huggingface.co/spaces/shriarul5273/Kenyan_Food_Classification_Gradio
