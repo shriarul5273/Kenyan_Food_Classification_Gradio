@@ -34,4 +34,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{secrets.DOCKER_USERNAME}}/kenyan_food_classification_gradio:2
+          tags: ${{secrets.DOCKER_USERNAME}}/kenyan_food_classification_gradio:1.0.${{github.run_number}} , ${{secrets.DOCKER_USERNAME}}/kenyan_food_classification_gradio:latest
