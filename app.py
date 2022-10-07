@@ -53,5 +53,5 @@ description = "Kenyan Food Classification"
 
 examples = ['1.jpg','2.jpg','3.jpg','4.jpg']
 
-gr.Interface(inference, gr.Image(type="pil"), "label", server_name="0.0.0.0",title=title,
-                                description=description, examples=examples).launch()
+gr.Interface(inference, gr.Image(label="Input Image",type="pil"), "label", title=title,
+                                description=description, examples=examples,cache_examples=False).launch(enable_queue=True)
