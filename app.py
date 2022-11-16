@@ -49,7 +49,7 @@ def inference(img):
 
 
 title = 'Kenyan Food Classification '
-description = "Kenyan Food Classification"
+description = "Kenyan Food Classification, hello handplus"
 
 examples = ['1.jpg','2.jpg','3.jpg','4.jpg']
 
