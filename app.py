@@ -49,8 +49,7 @@ def inference(img):
 
 
 title = 'Kenyan Food Classification '
-description = "Kenyan Food Classification, hello handplus, hi from dijon"
-
+description = "Kenyan Food Classification"
 examples = ['1.jpg','2.jpg','3.jpg','4.jpg']
 
 gr.Interface(inference, gr.Image(label="Input Image",type="pil"), "label", title=title,
